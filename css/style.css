@@ -5,10 +5,44 @@
     box-sizing: border-box;
 }
 
+/* UTILITY */
+.radius{
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
 /* HEADER */
 header{
     padding: 20px 0;
 }
 h1{
     text-align: center;
+}
+
+/* MAIN */
+.add-actions{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.add-actions input{
+    padding: 5px;
+    width: 250px;
+    margin-right: 10px;
+}
+.add-actions button{
+    padding: 5px;
+    cursor: pointer;
+}
+
+.list-action{
+    width: 700px;
+    margin: 0 auto;
+    background-color: lightblue;
+    padding: 10px;
+}
+.single-action{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    margin-bottom: 10px;
 }
