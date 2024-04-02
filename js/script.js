@@ -50,10 +50,13 @@ createApp({
         };
     },
     methods: {
+        eliminateItems(){
+            this.listAction.splice(this.index, 1);
+        }
         
         
     },
     mounted() {
-        console.log(this.listAction[0].done);
+       
     }
 }).mount('#app');
