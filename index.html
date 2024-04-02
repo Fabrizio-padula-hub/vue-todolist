@@ -25,7 +25,7 @@
             <!-- lista di azioni -->
             <section class="list-action radius">
                 <div v-for="(objectAction, index) in listAction" :key="index" :class="{ 'crossed-out': objectAction.done }" class="single-action">
-                    <span>{{objectAction.text}}</span>
+                    <span @click="{ 'crossed-out': objectAction.done = true }">{{objectAction.text}}</span>
                     <span @click="eliminateItems()"><i class="fa-solid fa-xmark"></i></span>
                 </div>
                 
