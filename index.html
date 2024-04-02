@@ -17,7 +17,7 @@
 
             <!-- input e pulsante -->
             <section class="add-actions">
-                <input class="radius" type="text" placeholder="Scrivi la tua azione" v-model="textInput">
+                <input class="radius" type="text" placeholder="Scrivi la tua azione" @keyup.enter="pushNewAction" v-model="textInput">
                 <button class="radius" @click="pushNewAction()">Aggiungi</button>
             </section>
             <!-- /input e pulsante -->
