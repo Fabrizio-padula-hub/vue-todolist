@@ -21,11 +21,39 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-           
-            
+            listAction: [
+                {
+                    text: 'Fare la spesa',
+                    done: true
+                },
+                {
+                    text: 'Fare il sugo',
+                    done: false
+                },
+                {
+                    text: 'Scendere il cane',
+                    done: false
+                },
+                {
+                    text: 'Fare benzina',
+                    done: true
+                },
+                {
+                    text: 'Fare il bucato',
+                    done: false
+                },
+                {
+                    text: 'Fare la doccia',
+                    done: true
+                },
+            ],
         };
     },
     methods: {
         
+        
     },
+    mounted() {
+        console.log(this.listAction[0].done);
+    }
 }).mount('#app');

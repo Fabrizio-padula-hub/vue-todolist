@@ -10,6 +10,9 @@
     border-radius: 10px;
     border: 1px solid black;
 }
+.crossed-out{
+    text-decoration: line-through;
+}
 
 /* HEADER */
 header{
@@ -44,5 +47,8 @@ h1{
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid gray;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+}
+.single-action span{
+    margin-bottom: 8px;
 }
