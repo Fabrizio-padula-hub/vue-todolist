@@ -21,13 +21,14 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            textInput: '', 
             listAction: [
                 {
                     text: 'Fare la spesa',
                     done: true
                 },
                 {
-                    text: 'Fare il sugo',
+                    text: 'Spegnere il sugo',
                     done: false
                 },
                 {
@@ -39,11 +40,11 @@ createApp({
                     done: true
                 },
                 {
-                    text: 'Fare il bucato',
+                    text: 'Prendere la farina',
                     done: false
                 },
                 {
-                    text: 'Fare la doccia',
+                    text: 'Mangiare il sushi',
                     done: true
                 },
             ],
@@ -52,11 +53,22 @@ createApp({
     methods: {
         eliminateItems(){
             this.listAction.splice(this.index, 1);
+        },
+        
+        pushNewAction(){
+            const newTask = {
+                text: this.textInput,
+                done: false
+            };
+            this.listAction.unshift(newTask);
+            this.textInput = '';
         }
+        
         
         
     },
     mounted() {
+        console.log(this.listAction);
        
     }
 }).mount('#app');
