@@ -51,10 +51,9 @@ createApp({
         };
     },
     methods: {
-        eliminateItems(){
-            this.listAction.splice(this.index, 1);
+        eliminateItems(indexToDelete){
+            this.listAction.splice(indexToDelete, 1);
         },
-        
         pushNewAction(){
             const newTask = {
                 text: this.textInput,
@@ -63,9 +62,6 @@ createApp({
             this.listAction.unshift(newTask);
             this.textInput = '';
         }
-        
-        
-        
     },
     mounted() {
         console.log(this.listAction);
